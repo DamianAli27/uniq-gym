@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>UNIQ GYM</title>
+  <style>
+    /* Cambia aquí los colores y la tipografía. */
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body { margin: 0; background: #000; color: #fff; font-family: Arial, sans-serif; }
+    a { color: inherit; text-decoration: none; }
+    .barra-superior { position: relative; display: flex; justify-content: center; align-items: center; min-height: 110px; padding: 20px; }
+    .logo { width: 130px; height: 110px; border: none; background: transparent; display: grid; place-items: center; }
+    .logo img { width: 100%; height: 100%; object-fit: contain; }
+    .boton-buscar { position: absolute; left: 25px; padding: 8px; border: 0; background: transparent; color: white; cursor: pointer; }
+    .boton-buscar svg { width: 26px; height: 26px; display: block; }
+    nav { display: flex; justify-content: center; gap: 30px; padding: 20px 12px 28px; }
+    nav a { font-size: 18px; }
+    nav a:hover, nav a:focus-visible { text-decoration: underline; }
+    .busqueda { padding: 0 24px 24px; text-align: center; }
+    .busqueda input { width: min(100%, 450px); padding: 12px; font: inherit; }
+    .portada { min-height: 0; padding: 0; background: transparent; display: grid; place-items: center; }
+    /* Guarda principal.jpeg en la misma carpeta que el HTML. */
+    .portada img { display: block; width: 100%; height: auto; max-height: 650px; object-fit: contain; }
+    .catalogo { max-width: 1200px; margin: auto; padding: 35px 20px 60px; }
+    h1 { text-align: center; font-size: clamp(30px, 6vw, 54px); margin: 25px 0 45px; font-weight: 900; }
+    .categorias { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 20px; }
+    .categoria { text-align: center; }
+    .categoria > a { display: block; }
+    .foto-categoria { width: 100%; height: 500px; padding: 0; background: transparent; }
+    .foto-categoria img { display: block; width: 100%; height: 100%; object-fit: contain; object-position: center; }
+    .categoria h2 { font-size: 22px; text-transform: uppercase; }
+    .contacto { border-top: 1px solid #333; text-align: center; padding: 35px 20px; }
+    .contacto a { text-decoration: underline; }
+    footer { text-align: center; padding: 20px; color: #aaa; font-size: 14px; }
+
+    @media (max-width: 480px) {
+      nav { gap: 24px; }
+      .categorias { gap: 12px; }
+      .categoria h2 { font-size: 16px; }
+      .foto-categoria { height: 280px; }
+    }
+  </style>
+</head>
+<body>
+  <header id="inicio">
+    <div class="barra-superior">
+      <button class="boton-buscar" type="button"
+        aria-label="Abrir búsqueda"
+        aria-expanded="false"
+        aria-controls="busqueda">
+        <svg viewBox="0 0 24 24" fill="none"
+          stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+          <circle cx="10" cy="10" r="7"></circle>
+          <path d="m15 15 6 6"></path>
+        </svg>
+      </button>
+
+      <!-- Guarda logo.png en la misma carpeta que index.html. -->
+      <a class="logo" href="#inicio" aria-label="UNIQ GYM: inicio">
+        <img src="logo.png" alt="Logotipo de UNIQ GYM">
+      </a>
+    </div>
+
+    <nav aria-label="Navegación principal">
+      <a href="#inicio">Inicio</a>
+      <a href="#catalogo">Catálogo</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
+
+    <div class="busqueda" id="busqueda" hidden>
+      <label for="buscar">Buscar categoría:</label>
+      <input id="buscar" type="search"
+        placeholder="Escribe el nombre de una categoría">
+    </div>
+  </header>
+
+  <main>
+    <section class="portada" aria-label="Imagen principal">
+      <img src="principal.png" alt="Promoción de UNIQ GYM">
+    </section>
+
+    <section class="catalogo" id="catalogo">
+      <h1>COMPRA AHORA</h1>
+
+      <div class="categorias">
+        <!-- Cada categoría abre su catálogo en otra pestaña. -->
+
+        <article class="categoria">
+          <a href="dama.html" target="_blank" rel="noopener noreferrer">
+            <div class="foto-categoria">
+              <img src="dama_modelo.jpg" alt="Modelo de ropa para dama">
+            </div>
+            <h2>Dama</h2>
+          </a>
+        </article>
+
+        <article class="categoria">
+          <a href="original.html" target="_blank" rel="noopener noreferrer">
+            <div class="foto-categoria">
+              <img src="original_modelo.jpg" alt="Modelo de ropa original">
+            </div>
+            <h2>Original</h2>
+          </a>
+        </article>
+
+        <article class="categoria">
+          <a href="caballero.html" target="_blank" rel="noopener noreferrer">
+            <div class="foto-categoria">
+              <img src="caballero_modelo.jpg" alt="Modelo de ropa para caballero">
+            </div>
+            <h2>Caballero</h2>
+          </a>
+        </article>
+      </div>
+
+      <p id="sin-resultados" hidden>No se encontraron categorías.</p>
+    </section>
+
+    <section class="contacto" id="contacto">
+      <h2>Contacto</h2>
+      <p>Teléfono: <a href="tel:+528443833187">844 383 3187</a></p>
+      <p>Teléfono: <a href="tel:+528448817346">844 881 7346</a></p>
+
+      <p>
+        <a href="https://chat.whatsapp.com/HWTNozICdK42UCCc6Hy4zl"
+          target="_blank"
+          rel="noopener noreferrer">
+          Únete a nuestro grupo de WhatsApp
+        </a>
+      </p>
+    </section>
+  </main>
+
+  <footer>UNIQ GYM · SLW</footer>
+
+  <script>
+    // Abre el buscador y filtra las categorías por su nombre.
+    const boton = document.querySelector('.boton-buscar');
+    const panel = document.querySelector('#busqueda');
+    const campo = document.querySelector('#buscar');
+
+    boton.addEventListener('click', () => {
+      panel.hidden = !panel.hidden;
+      boton.setAttribute('aria-expanded', String(!panel.hidden));
+      if (!panel.hidden) campo.focus();
+    });
+
+    campo.addEventListener('input', () => {
+      const texto = campo.value.trim().toLocaleLowerCase('es');
+      let visibles = 0;
+
+      document.querySelectorAll('.categoria').forEach(categoria => {
+        categoria.hidden = !categoria.querySelector('h2')
+          .textContent.toLocaleLowerCase('es').includes(texto);
+
+        if (!categoria.hidden) visibles++;
+      });
+
+      document.querySelector('#sin-resultados').hidden = visibles > 0;
+    });
+  </script>
+</body>
+</html>
