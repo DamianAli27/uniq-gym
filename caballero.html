@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Caballero | UNIQ GYM</title>
+
+  <style>
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      background: #000;
+      color: #fff;
+      font-family: Arial, sans-serif;
+    }
+
+    header {
+      padding: 30px 20px;
+      text-align: center;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: 30px;
+    }
+
+    .productos {
+      max-width: 1400px;
+      margin: auto;
+      padding: 20px;
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 30px 20px;
+    }
+
+    .producto img {
+      display: block;
+      width: 100%;
+      height: 350px;
+      object-fit: contain;
+    }
+
+    .producto h2 {
+      margin: 15px 0 8px;
+      font-size: 16px;
+      font-weight: normal;
+      text-transform: uppercase;
+    }
+
+    .precio {
+      margin: 0 0 8px;
+      font-size: 18px;
+    }
+
+    .tallas {
+      margin: 0;
+      color: #bbb;
+      font-size: 14px;
+    }
+
+    @media (max-width: 900px) {
+      .productos {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+    }
+
+    @media (max-width: 480px) {
+      .producto img {
+        height: 240px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1>CABALLERO</h1>
+  </header>
+
+  <main class="productos">
+
+    <!-- Cambia la imagen, nombre, precio y tallas. -->
+    <article class="producto">
+      <img src="compresion_mlbyla.jpg" alt="Compresion manga larga blanca">
+      <h2>Compresion YOUNGLA manga larga blanca</h2>
+      <p class="precio">$280.00 MXN</p>
+      <p class="tallas">Uni talla</p>
+    </article>
+
+    <article class="producto">
+<img src="pants_ccdfyne.jpg" alt="Pants cafe">      
+<h2>Pants cargo DFYNE cafe</h2>
+      <p class="precio">$500.00 MXN</p>
+      <p class="tallas">Uni talla</p>
+    </article>
+
+     <article class="producto">
+<img src="pants_cgdfyne.jpg" alt="Pants gris">      
+<h2>Pants cargo DFYNE gris</h2>
+      <p class="precio">$500.00 MXN</p>
+      <p class="tallas">Uni talla</p>
+    </article>
+
+     <article class="producto">
+<img src="pants_gyla.jpg" alt="Pants gris">      
+<h2>Pants YOUNGLA gris</h2>
+      <p class="precio">$500.00 MXN</p>
+      <p class="tallas">Uni talla</p>
+    </article>  
+
+     <article class="producto">
+<img src="pants_nalo.jpg" alt="Pants negro">      
+<h2>Pants alo negro</h2>
+      <p class="precio">$500.00 MXN</p>
+      <p class="tallas">Uni talla</p>
+    </article>
+
+  </main>
+</body>
+</html>
