@@ -1,0 +1,177 @@
+<!DOCTYPE html><html lang="es"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Unisex | UNIQ GYM</title><style>
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      background: #000;
+      color: #fff;
+      font-family: Arial, sans-serif;
+    }
+
+    header {
+      padding: 30px 20px;
+      text-align: center;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: 30px;
+    }
+
+    .productos {
+      max-width: 1400px;
+      margin: auto;
+      padding: 20px;
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 30px 20px;
+    }
+
+    .producto img {
+      display: block;
+      width: 100%;
+      height: 350px;
+      object-fit: contain;
+    }
+
+    .producto h2 {
+      margin: 15px 0 8px;
+      font-size: 16px;
+      font-weight: normal;
+      text-transform: uppercase;
+    }
+
+    .precio {
+      margin: 0 0 8px;
+      font-size: 18px;
+    }
+
+    .tallas {
+      margin: 0;
+      color: #bbb;
+      font-size: 14px;
+    }
+
+    @media (max-width: 900px) {
+      .productos {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+    }
+
+    @media (max-width: 480px) {
+      .producto img {
+        height: 240px;
+      }
+    }
+  
+a {color:inherit;} nav {display:flex;justify-content:center;flex-wrap:wrap;gap:20px;margin-top:20px;} .abrir-foto {display:block;width:100%;padding:0;background:transparent;border:0;color:inherit;cursor:pointer;} .abrir-foto:focus-visible {outline:2px solid white;} dialog {background:#000;color:#fff;border:1px solid #777;width:min(900px,95vw);max-height:95vh;} dialog::backdrop {background:rgba(0,0,0,.85);} dialog img {width:100%;height:65vh;object-fit:contain;} .controles {display:flex;justify-content:center;gap:18px;align-items:center;} .controles button {padding:10px;cursor:pointer;}
+
+/* Vista del producto: fotografías a la izquierda e información a la derecha. */
+dialog.ficha-producto {position:fixed;inset:0;width:100vw;max-width:none;height:100dvh;max-height:none;margin:0;padding:0;border:0;background:#000;color:#fff;overflow:auto;}
+dialog.ficha-producto::backdrop {background:#000;}
+.ficha-barra {position:sticky;top:0;z-index:2;display:flex;align-items:center;justify-content:space-between;gap:20px;padding:18px 28px;background:#000;border-bottom:1px solid #222;}
+.ficha-barra strong {font-size:19px;letter-spacing:2px;}
+.ficha-barra button {background:transparent;color:#fff;border:1px solid #777;border-radius:25px;padding:10px 18px;cursor:pointer;font:inherit;}
+.ficha-contenido {display:grid;grid-template-columns:minmax(0,2fr) minmax(280px,1fr);gap:45px;padding:30px;max-width:1800px;margin:auto;align-items:start;}
+.ficha-fotos {display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px;}
+.ficha-fotos.una-foto {grid-template-columns:1fr;}
+.ficha-fotos img {display:block;width:100%;height:auto;aspect-ratio:3/4;max-height:80vh;object-fit:contain;background:#000;}
+.ficha-info {position:sticky;top:95px;text-align:left;padding:10px 0;overflow-wrap:anywhere;}
+.ficha-info h2 {font-size:clamp(25px,3vw,38px);line-height:1.2;font-weight:normal;margin:0 0 22px;text-transform:uppercase;}
+.ficha-info .ficha-precio {font-size:22px;margin:0 0 35px;}
+.ficha-info h3 {font-size:15px;text-transform:uppercase;letter-spacing:1px;margin:26px 0 14px;}
+.ficha-info .ficha-especificaciones {line-height:1.7;color:#ccc;white-space:pre-line;}
+.ficha-tallas {display:flex;flex-wrap:wrap;gap:10px;}
+.ficha-talla {display:inline-block;min-width:48px;padding:12px 15px;border:1px solid #777;text-align:center;}
+@media(max-width:850px){.ficha-contenido{grid-template-columns:1fr;gap:25px;padding:18px;}.ficha-info{position:static;}.ficha-fotos img{max-height:65vh;}.ficha-barra{padding:15px 18px;}}
+
+</style></head><body><header><h1>UNISEX</h1><nav aria-label="Categorías"><a href="index.html">Inicio</a><a href="dama.html">Dama</a><a href="caballero.html">Caballero</a><a href="original.html">Original</a><a href="unisex.html">Unisex</a></nav></header><main class="productos">
+<article class="producto">
+  <button class="abrir-foto" type="button" aria-label="Ver fotos de Pants DFYNE azul" data-fotos="unisex/pants_adfyne.jpg" data-especificaciones="Tipo de prenda: pants. Categoría: unisex.">
+    <img src="unisex/pants_adfyne.jpg" alt="Pants DFYNE azul" loading="lazy">
+  </button>
+  <h2>Pants DFYNE azul</h2>
+  <p class="precio">$500.00 MXN</p>
+  <p class="tallas">Tallas disponibles: Talla única</p>
+</article>
+<article class="producto">
+  <button class="abrir-foto" type="button" aria-label="Ver fotos de Pants DFYNE café" data-fotos="unisex/pants_ccdfyne.jpg" data-especificaciones="Tipo de prenda: pants. Categoría: unisex.">
+    <img src="unisex/pants_ccdfyne.jpg" alt="Pants DFYNE café" loading="lazy">
+  </button>
+  <h2>Pants DFYNE café</h2>
+  <p class="precio">$500.00 MXN</p>
+  <p class="tallas">Tallas disponibles: Talla única</p>
+</article>
+<article class="producto">
+  <button class="abrir-foto" type="button" aria-label="Ver fotos de Pants DFYNE gris" data-fotos="unisex/pants_cgdfyne.jpg" data-especificaciones="Tipo de prenda: pants. Categoría: unisex.">
+    <img src="unisex/pants_cgdfyne.jpg" alt="Pants DFYNE gris" loading="lazy">
+  </button>
+  <h2>Pants DFYNE gris</h2>
+  <p class="precio">$500.00 MXN</p>
+  <p class="tallas">Tallas disponibles: Talla única</p>
+</article>
+<article class="producto">
+  <button class="abrir-foto" type="button" aria-label="Ver fotos de Pants azul marino" data-fotos="unisex/pants_jags.jpg" data-especificaciones="Tipo de prenda: pants. Categoría: unisex.">
+    <img src="unisex/pants_jags.jpg" alt="Pants azul marino" loading="lazy">
+  </button>
+  <h2>Pants azul marino</h2>
+  <p class="precio">$500.00 MXN</p>
+  <p class="tallas">Tallas disponibles: Talla única</p>
+</article>
+<article class="producto">
+  <button class="abrir-foto" type="button" aria-label="Ver fotos de Pants gris" data-fotos="unisex/pants_jggs.jpg" data-especificaciones="Tipo de prenda: pants. Categoría: unisex.">
+    <img src="unisex/pants_jggs.jpg" alt="Pants gris" loading="lazy">
+  </button>
+  <h2>Pants gris</h2>
+  <p class="precio">$500.00 MXN</p>
+  <p class="tallas">Tallas disponibles: Talla única</p>
+</article>
+<article class="producto">
+  <button class="abrir-foto" type="button" aria-label="Ver fotos de Pants negro" data-fotos="unisex/pants_jngs.jpg" data-especificaciones="Tipo de prenda: pants. Categoría: unisex.">
+    <img src="unisex/pants_jngs.jpg" alt="Pants negro" loading="lazy">
+  </button>
+  <h2>Pants negro</h2>
+  <p class="precio">$500.00 MXN</p>
+  <p class="tallas">Tallas disponibles: Talla única</p>
+</article>
+</main><script>
+
+// Edita data-fotos y data-especificaciones en el botón de cada producto.
+const ficha = document.createElement('dialog');
+ficha.className = 'ficha-producto';
+ficha.setAttribute('aria-labelledby', 'ficha-titulo');
+ficha.innerHTML = `<div class="ficha-barra"><strong>UNIQ GYM</strong><button type="button" class="ficha-cerrar" autofocus>✕ Cerrar</button></div>
+<div class="ficha-contenido"><div class="ficha-fotos"></div><section class="ficha-info">
+<h2 id="ficha-titulo"></h2><p class="ficha-precio"></p><h3>Especificaciones del producto</h3><p class="ficha-especificaciones"></p>
+<h3>Tallas disponibles</h3><div class="ficha-tallas"></div></section></div>`;
+document.body.append(ficha);
+let desbordamientoAnterior = '';
+function abrirFicha(boton) {
+ const producto = boton.closest('.producto');
+ const nombre = producto.querySelector('h2').textContent.trim();
+ ficha.querySelector('h2').textContent = nombre;
+ ficha.querySelector('.ficha-precio').textContent = producto.querySelector('.precio').textContent;
+ ficha.querySelector('.ficha-especificaciones').textContent = boton.dataset.especificaciones || nombre;
+ const fotos = (boton.dataset.fotos || producto.querySelector('img').getAttribute('src')).split(',').map(r => r.trim()).filter(Boolean);
+ const contenedor = ficha.querySelector('.ficha-fotos');
+ contenedor.replaceChildren();
+ contenedor.classList.toggle('una-foto', fotos.length === 1);
+ fotos.forEach((ruta, i) => {
+  const img = document.createElement('img'); img.src = ruta; img.alt = nombre + ' — fotografía ' + (i + 1);
+  if(i > 1) img.loading = 'lazy';
+  contenedor.append(img);
+ });
+ const tallas = producto.querySelector('.tallas').textContent.replace(/^Tallas disponibles:\s*/i, '').replace(/\.\s*$/, '').trim();
+ const contenedorTallas = ficha.querySelector('.ficha-tallas'); contenedorTallas.replaceChildren();
+ tallas.split(',').forEach(talla => {const etiqueta = document.createElement('span');etiqueta.className='ficha-talla';etiqueta.textContent=talla.trim();contenedorTallas.append(etiqueta);});
+ desbordamientoAnterior = document.body.style.overflow;
+ document.body.style.overflow = 'hidden';
+ ficha.showModal(); ficha.scrollTop = 0;
+}
+document.querySelectorAll('.abrir-foto').forEach(boton => boton.addEventListener('click', () => abrirFicha(boton)));
+ficha.querySelector('.ficha-cerrar').addEventListener('click', () => ficha.close());
+ficha.addEventListener('close', () => {document.body.style.overflow = desbordamientoAnterior;});
+
+</script>
+</body></html>
