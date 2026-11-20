@@ -1,0 +1,67 @@
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      background: #000;
+      color: #fff;
+      font-family: Arial, sans-serif;
+    }
+
+    header {
+      padding: 30px 20px;
+      text-align: center;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: 30px;
+    }
+
+    .productos {
+      max-width: 1400px;
+      margin: auto;
+      padding: 20px;
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 30px 20px;
+    }
+
+    .producto img {
+      display: block;
+      width: 100%;
+      height: 350px;
+      object-fit: contain;
+    }
+
+    .producto h2 {
+      margin: 15px 0 8px;
+      font-size: 16px;
+      font-weight: normal;
+      text-transform: uppercase;
+    }
+
+    .precio {
+      margin: 0 0 8px;
+      font-size: 18px;
+    }
+
+    .tallas {
+      margin: 0;
+      color: #bbb;
+      font-size: 14px;
+    }
+
+    @media (max-width: 900px) {
+      .productos {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+    }
+
+    @media (max-width: 480px) {
+      .producto img {
+        height: 240px;
+      }
+    }
+  
+a {color:inherit;} nav {display:flex;justify-content:center;flex-wrap:wrap;gap:20px;margin-top:20px;} .abrir-foto {display:block;width:100%;padding:0;background:transparent;border:0;color:inherit;cursor:pointer;} .abrir-foto:focus-visible {outline:2px solid white;} dialog {background:#000;color:#fff;border:1px solid #777;width:min(900px,95vw);max-height:95vh;} dialog::backdrop {background:rgba(0,0,0,.85);} dialog img {width:100%;height:65vh;object-fit:contain;} .controles {display:flex;justify-content:center;gap:18px;align-items:center;} .controles button {padding:10px;cursor:pointer;}
